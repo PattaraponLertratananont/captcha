@@ -13,13 +13,4 @@ export class AppComponent {
   constructor(
     private http: HttpClient
     ) {}
-
-  // ngOnInit(
-  //   ) {
-  //     this.http.get('http://localhost:1323/getCaptcha')
-  //         .subscribe(
-  //             data => {
-  //                 console.log(data);
-  //             });
-  //           }
 }
