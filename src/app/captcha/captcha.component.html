@@ -1,5 +1,10 @@
 <div>
   <label for="showCaptcha">Captcha: {{capt}}</label>
   <br><br>
-    <label><b>Result: </b></label> <input type="text" placeholder='Calulate {{capt}}'>
+    <label><b>Result: </b></label> <input #answer placeholder='Calulate {{capt}}'>
+  </div>
+  <div>
+    <p>
+      <button (click)="conAns(answer.value)">Confirm Answer</button>
+    </p>
   </div>

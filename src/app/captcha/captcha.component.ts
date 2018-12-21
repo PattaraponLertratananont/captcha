@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Captcha } from '../captcha';
+import { Captcha } from "src/app/Captcha";
 import { CaptchaService } from 'src/app/captcha.service'
+
 
 @Component({
   selector: 'app-captcha',
@@ -10,23 +11,21 @@ import { CaptchaService } from 'src/app/captcha.service'
 })
 
 export class CaptchaComponent implements OnInit {
-
+  
   capt:Captcha
 
   constructor(
     private http: HttpClient,
     private captService: CaptchaService
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.showCaptcha()
   }
 
-  showCaptcha(){
+  showCaptcha(): void {
     this.captService.getCaptcha()
-      .subscribe(data => {
-        this.capt=data['captcha']
-      })
+      .subscribe(data => this.capt = data['captcha'])
   }
 
 }

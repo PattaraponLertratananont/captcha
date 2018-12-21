@@ -1,4 +1,4 @@
-export class Captcha {
+export interface Captcha {
     captcha: string;
     result: string;
   }
